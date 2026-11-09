@@ -72,5 +72,7 @@ I'm a Computer Science and Artificial Intelligence graduate from Aberystwyth Uni
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ewan1303/Ewan1303/output/github-snake-dark.svg" />
-  <img src="https://raw.githubusercontent.com/Ewan1303/Ewan1303/output/github-snake.svg" alt="A snake eating my GitHub contribution graph" />
+  <img src="https://raw.githubusercontent.com/Ewan1303/Ewan1303/output/github-snake.svg" alt="A snake playing Snake on my GitHub contribution graph" />
 </picture>
+
+<p align="center"><sub>🐍 This snake plays Snake on my contribution graph: it eats every square, grows with each one and plans a route that never runs into itself. <a href="https://github.com/Ewan1303/Ewan1303/tree/main/snake">How it works</a></sub></p>
