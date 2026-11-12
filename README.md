@@ -1,78 +1,81 @@
-<h1 align="center">Hi, I'm Ewan 👋</h1>
+# Ewan Begley
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=2800&pause=900&color=2F81F7&center=true&vCenter=true&width=560&lines=Computer+Science+%26+AI+graduate;Heading+into+robotics;Evolved+agents%2C+poker+bots%2C+neural+nets" alt="Computer Science and AI graduate, heading into robotics" />
+Computer Science and Artificial Intelligence graduate (BSc, Aberystwyth University, 2026), working towards a career in robotics.
+
+I build and compare learning systems: reinforcement learning, genetic algorithms, NEAT and spiking networks, trained on control tasks and benchmarks written from scratch, with repeated seeds and held-out tests so the comparisons are fair. Alongside that, I'm studying the dynamics and control behind robotics.
+
+## Selected projects
+
+### [Neural Arena](https://github.com/Ewan1303/Neural-Arena)
+
+PPO, a genetic algorithm and NEAT trained on four control tasks: landing a spacecraft, a lander that has to remember a blinking beacon, a drone flying to waypoints and a car racing on random tracks. 408 training runs compare activation functions, architectures, training time and scores.
+
+**Key finding:** no training method won everywhere. PPO led on the drone, the genetic algorithm on the beacon lander, and NEAT solved the lander and the racer with networks 50 to 200 times smaller than the fixed ones.
+
+<sub>Python · PyTorch · NumPy</sub>
+
+<a href="https://github.com/Ewan1303/Neural-Arena"><img src="https://raw.githubusercontent.com/Ewan1303/Neural-Arena/main/results/gifs/lander.gif" alt="The best agent from each training method landing the same spacecraft: PPO, the genetic algorithm and NEAT" width="100%" /></a>
+
+### [Neural Efficiency](https://github.com/Ewan1303/Neural-Efficiency)
+
+How fast does the cost of training grow as a task gets harder? A genetic algorithm, NEAT, a backprop network and a spiking network climb five task ladders (parity, majority, spirals, glyphs and a robot arm). 881 runs measure time, steps, examples and weights at every rung, with growth curves fitted to each.
+
+**Key finding:** whether the cost explodes depends on the task, not the learner. On parity, every extra input bit doubled backprop's training time (3 ms at 2 bits, 5.4 s at 12); on majority, with the same inputs, it grew in a straight line.
+
+<sub>Python · PyTorch · NumPy</sub>
+
+<a href="https://github.com/Ewan1303/Neural-Efficiency"><img src="https://raw.githubusercontent.com/Ewan1303/Neural-Efficiency/main/results/visuals/arm.gif" alt="Four learners steering a 4-joint robot arm to targets they never trained on" width="100%" /></a>
+
+### [Neural Size](https://github.com/Ewan1303/Neural-Size)
+
+How big does a feed-forward network need to be, and where should its weights go? 3,965 training runs of 698 networks on six tasks cover size, depth, first-layer width with 1,000 inputs, shape, activation function and cost.
+
+**Key finding:** the size a task needs is set by the task, not by its number of inputs, and past that size extra weights buy almost nothing. On the spirals, 320 times as many parameters raised accuracy from 99.8% to 99.9%.
+
+<sub>Python · PyTorch · NumPy</sub>
+
+<a href="https://github.com/Ewan1303/Neural-Size"><img src="https://raw.githubusercontent.com/Ewan1303/Neural-Size/main/results/figures/maps.png" alt="Twenty networks of different sizes and depths drawing their answer to the two-spiral task" width="440" /></a>
+
+### [Poker Tournament](https://github.com/Ewan1303/Poker-Tournament)
+
+A no-limit hold'em engine, tournament runner and web app for a bot-building competition. Everyone builds a bot however they like, from hand-written rules to reinforcement learning, and the organiser plays every bot against the rest over a thousand tournaments.
+
+<sub>Python · JavaScript · Docker</sub>
+
+<a href="https://github.com/Ewan1303/Poker-Tournament"><img src="https://raw.githubusercontent.com/Ewan1303/Poker-Tournament/main/docs/images/play.jpg" alt="The Poker Tournament web app: a hold'em table of bots with a scoreboard and hand log" width="440" /></a>
+
+## Education
+
+**BSc Computer Science and Artificial Intelligence**, Aberystwyth University, 2026
+
+Final-year project: [Evolving Intelligent Agents for Unknown Tasks using Genetic Algorithms](https://github.com/Ewan1303/Evolving-Intelligent-Agents-for-Unknown-Tasks-using-Genetic-Algorithms). It implements NEAT in plain Python and measures which settings (mutation strength, selection, elitism, crossover and starting topology) work best in different fitness landscapes. [Read the report](https://docs.google.com/document/d/1-rRv-bY-L03CynCe2jSer02WEVu4wYjsx1XZUhHTXPI/edit?tab=t.0)
+
+## Other projects
+
+- **[Rubik's Cube Rings](https://github.com/Ewan1303/Rubiks-Cube-Rings):** a playable Rubik's cube drawn as nine rings beside the same cube in perspective, with a two-phase solver.
+- **[Storage Visualizer](https://github.com/Ewan1303/Storage-Visualizer):** a treemap and sunburst disk-usage explorer for Windows, built with PySide6.
+- **[Machine Learning](https://github.com/Ewan1303/Machine-Learning):** practice code from a self-study course on neural networks, from a single neuron by hand to continual and reinforcement learning.
+
+## Tools
+
+Used across my 25 repositories, 10 public and 15 private.
+
+<p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python%2Cpytorch%2Cts%2Cjs%2Creact%2Cthreejs%2Celectron%2Cfastapi%2Cvite%2Cqt%2Cdocker%2Cgithubactions%2Clua%2Cblender%2Cgit&perline=15&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=python%2Cpytorch%2Cts%2Cjs%2Creact%2Cthreejs%2Celectron%2Cfastapi%2Cvite%2Cqt%2Cdocker%2Cgithubactions%2Clua%2Cblender%2Cgit&perline=15&theme=light" alt="Python, PyTorch, TypeScript, JavaScript, React, three.js, Electron, FastAPI, Vite, Qt, Docker, GitHub Actions, Lua, Blender, Git" />
+</picture>
 </p>
 
-I'm a Computer Science and Artificial Intelligence graduate from Aberystwyth University (2026), working towards a career in **robotics**. I like building things that learn: neural networks written from scratch, agents that evolve their own brains, and bots that play poker against each other.
+- **Methods:** reinforcement learning (PPO), genetic algorithms, NEAT, spiking neural networks
+- **Also:** NumPy, pandas, React Native with Expo, SQLAlchemy, Streamlit, Chrome extensions, Typst
 
-- 🎓 **Final-year project:** neuroevolution with NEAT ([report](https://docs.google.com/document/d/1-rRv-bY-L03CynCe2jSer02WEVu4wYjsx1XZUhHTXPI/edit?tab=t.0) · [code](https://github.com/Ewan1303/Evolving-Intelligent-Agents-for-Unknown-Tasks-using-Genetic-Algorithms))
-- 🤖 **Now:** teaching myself robotics, from the maths and mechanics up
-- 🧠 **Interested in:** reinforcement learning, continual learning and neuroevolution
-
-<!-- - 📫 **Get in touch:** [LinkedIn](https://www.linkedin.com/in/YOUR-NAME) -->
-
-## 🚀 Featured projects
-
-<table>
-  <tr>
-    <td width="50%">
-      <a href="https://github.com/Ewan1303/Poker-Tournament"><img src="https://raw.githubusercontent.com/Ewan1303/Poker-Tournament/main/docs/images/play.jpg" alt="The Poker Tournament web app: a hold'em table of bots with a scoreboard and hand log" width="100%" /></a>
-    </td>
-    <td width="50%">
-      <h3><a href="https://github.com/Ewan1303/Poker-Tournament">Poker Tournament</a></h3>
-      <p>Build a poker bot however you like (rules, simulation, machine learning or reinforcement learning) and play it against everyone else's. A no-limit hold'em engine, tournament runner and web app for a bot-building competition with friends.</p>
-      <p><code>Python</code> <code>JavaScript</code> <code>Docker</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3><a href="https://github.com/Ewan1303/Rubiks-Cube-Rings">Rubik's Cube Rings</a></h3>
-      <p>A playable Rubik's cube drawn two ways at once: each of its nine layers as a ring, next to the same cube in perspective. Turn a ring and the cube turns with it. <b>Solve</b> finds a short solution with Kociemba's two-phase algorithm and plays it move by move.</p>
-      <p><code>HTML</code> <code>JavaScript</code></p>
-    </td>
-    <td width="50%">
-      <a href="https://github.com/Ewan1303/Rubiks-Cube-Rings"><img src="https://raw.githubusercontent.com/Ewan1303/Rubiks-Cube-Rings/main/screenshot.png" alt="Rubik's Cube Rings: the cube's nine layers drawn as rings, beside the same cube in perspective" width="100%" /></a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <a href="https://github.com/Ewan1303/Storage-Visualizer">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ewan1303/Storage-Visualizer/main/docs/treemap-dark.png" />
-          <img src="https://raw.githubusercontent.com/Ewan1303/Storage-Visualizer/main/docs/treemap-light.png" alt="Storage Visualizer showing a drive as a treemap" width="100%" />
-        </picture>
-      </a>
-    </td>
-    <td width="50%">
-      <h3><a href="https://github.com/Ewan1303/Storage-Visualizer">Storage Visualizer</a></h3>
-      <p>See what's taking up space on your drives. Scan a drive or a folder and explore it as a treemap or a sunburst, with tables of its contents, file types and largest files alongside.</p>
-      <p><code>Python</code> <code>PySide6</code></p>
-    </td>
-  </tr>
-</table>
-
-## 🧪 More projects
-
-| Project | What it is | Built with |
-|---|---|---|
-| [Evolving intelligent agents](https://github.com/Ewan1303/Evolving-Intelligent-Agents-for-Unknown-Tasks-using-Genetic-Algorithms) | My final-year project: creatures on a 2D grid evolve with NEAT, written from scratch in plain Python, to find which settings work best in different fitness landscapes | Python |
-| [Machine Learning](https://github.com/Ewan1303/Machine-Learning) | Practice code from a self-study course on neural networks: 22 experiments and 14 tasks, from a single neuron by hand to continual learning and reinforcement learning | Python, NumPy, PyTorch |
-| [Investment simulator](https://github.com/Ewan1303/Investment-simulator) | A Streamlit app that tests whether actively managing the largest companies in an index would have beaten simply holding the whole index | Python, Streamlit |
-
-## 🛠️ Tools I use
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python%2Cpytorch%2Cjs%2Cts%2Creact%2Cthreejs%2Chtml%2Ccss%2Cqt%2Clua%2Cdocker%2Cblender%2Cgit&theme=dark" />
-  <img src="https://skillicons.dev/icons?i=python%2Cpytorch%2Cjs%2Cts%2Creact%2Cthreejs%2Chtml%2Ccss%2Cqt%2Clua%2Cdocker%2Cblender%2Cgit&theme=light" alt="Python, PyTorch, JavaScript, TypeScript, React, three.js, HTML, CSS, Qt, Lua, Docker, Blender, Git" />
-</picture>
-
-<br />
 <br />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ewan1303/Ewan1303/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Ewan1303/Ewan1303/output/github-snake.svg" />
   <img src="https://raw.githubusercontent.com/Ewan1303/Ewan1303/output/github-snake.svg" alt="A snake playing Snake on my GitHub contribution graph" />
 </picture>
 
-<p align="center"><sub>🐍 This snake plays Snake on my contribution graph: it eats every square, grows with each one and plans a route that never runs into itself. <a href="https://github.com/Ewan1303/Ewan1303/tree/main/snake">How it works</a></sub></p>
+<sub>The snake plays Snake on my contribution graph: it eats every square, grows with each one and plans a route that never runs into itself. <a href="https://github.com/Ewan1303/Ewan1303/tree/main/snake">How it works</a></sub>
